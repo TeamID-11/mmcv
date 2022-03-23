@@ -99,12 +99,12 @@ class EpochBasedRunner(BaseRunner):
                 break
 
         work_dir = self.work_dir if self.work_dir is not None else 'NONE'
-        self.logger.info('Start running, host: %s, work_dir: %s',
-                         get_host_info(), work_dir)
-        self.logger.info('Hooks will be executed in the following order:\n%s',
-                         self.get_hook_info())
-        self.logger.info('workflow: %s, max: %d epochs', workflow,
-                         self._max_epochs)
+#         self.logger.info('Start running, host: %s, work_dir: %s',
+#                          get_host_info(), work_dir)
+#         self.logger.info('Hooks will be executed in the following order:\n%s',
+#                          self.get_hook_info())
+#         self.logger.info('workflow: %s, max: %d epochs', workflow,
+#                          self._max_epochs)
         self.call_hook('before_run')
 
         while self.epoch < self._max_epochs:
